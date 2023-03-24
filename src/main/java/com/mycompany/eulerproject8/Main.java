@@ -11,17 +11,16 @@ public class Main {
                
         int[][] bigArray = new int[array.length/4][4];    
         
-        int value = array[0];
         for (int i=0; i<array.length; i++){
-           
+           int k = i;
            for (int j=0; j<4; j++){
-               bigArray[i][j] = value;
-               value = array[i+1];
+               bigArray[i][j] = array[k];
+               k++;
            }
-                
+           i+=3;     
         } 
         
-        for (int i = 0; i < array.length/4; i++){
+        for (int i = 0; i < bigArray.length; i++){
             for (int j = 0; j < 4; j++){
                 System.out.print(bigArray[i][j] + " ");
             }
